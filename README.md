@@ -6,9 +6,9 @@
 ?>
 ```
 
-### CommonJS Example:
+### JavaScript/CommonJS
 ```js
-cost Ruxy = require('ruxy');
+const Ruxy = require('ruxy');
 
 async function main() {
 	const ctx = await Ruxy.run(['php', 'myFile.php']);

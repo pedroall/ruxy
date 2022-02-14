@@ -5,7 +5,10 @@
 		"module": "commonjs",
 		"rootDir": "./src/",
 		"outDir": "./dist/",
-		"strict": true
+		"strict": true,
+		"importHelpers": true,
+		"declaration": true,
+		"declarationMap": true
 	},
 	"exclude": ["./test/", "./*.config.ts"]
 }

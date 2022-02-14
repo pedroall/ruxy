@@ -7,7 +7,7 @@ export const run = (args: string[])=> {
 	
 	const stdout: string[] = []
 
-	return new Promise<Context>((resolve, reject) => {
+	return new Promise<Context>((resolve) => {
 		if(!cmd) throw 'Command must be specified'
 		
 		const ps = spawn(cmd, argv)			
@@ -15,7 +15,10 @@ export const run = (args: string[])=> {
 		ps.stdout.on('data', (chunk: Buffer) => {
 			stdout.push(chunk.toString())
 		})
-		ps.stderr.on('data', (chunk: Buffer) => reject(chunk.toString()))
+		ps.stderr.on('data', (error: Buffer) => {
+			throw new Error(error.toString())
+		})
+
 		ps.on('close', (code) => {
 			code = code ?? 1
 			const ctx = new Context(code, stdout.join(''))

@@ -10,5 +10,5 @@
 		"declaration": true,
 		"declarationMap": true
 	},
-	"exclude": ["./test/", "./*.config.ts"]
+	"exclude": ["./tests/", "./*.config.ts", "./*.config.js"]
 }

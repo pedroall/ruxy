@@ -1,4 +1,4 @@
-import { Context } from '../src/ruxy'
+import { Context } from '../dist/ruxy'
 import { test, expect } from '@jest/globals'
 
 const ENDL = '\n'

@@ -1,26 +1,19 @@
 # Example
-### Php example file:
-```php
-<?php
-	echo "Hello, World!";
-?>
+### Sh example file:
+```sh
+echo "Hello, World!";
 ```
 
-### JavaScript/CommonJS
-```js
-const Ruxy = require('ruxy');
+### Example code
 
-async function main() {
-	const ctx = await Ruxy.run(['php', 'myFile.php']);
-	console.log(ctx.stdout); // "Hello, World!"
-}
-main();
-```
-### Typescript/Module
 ```ts
-import { run } from 'ruxy'
-const ctx = await run(['php', 'myFile.php'])
-console.log(ctx.stdout) // "Hello, World!";
+import { Context } from 'ruxy'
+
+const ctx = new Context('sh', './exampleScript.sh')
+    .run()
+
+const response = await ctx.stdout()
+console.log(response) // Hello, World!
 ```
 
 ### Testing

@@ -1,7 +1,7 @@
 # Example
 ### Sh example file:
 ```sh
-echo "Hello, World!"
+echo Hello, World!
 ```
 
 ### Example code

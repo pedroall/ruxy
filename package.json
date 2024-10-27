@@ -1,6 +1,6 @@
 {
   "name": "ruxy",
-  "version": "0.0.4.1",
+  "version": "0.0.5",
   "main": "dist/ruxy.js",
   "repository": "https://github.com/pedroall/ruxy",
   "author": "pedroall",

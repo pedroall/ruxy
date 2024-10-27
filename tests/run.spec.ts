@@ -15,7 +15,7 @@ test('It should call echo and return hello world', async () => {
     expect(stdout).toBe(text + ENDL)
 })
 
-test('It should return an error trying to run gcc with unknown directory', async () => {
+test('It should run a command that throws an error and handle the error correctly', async () => {
     const ctx = new Context(['node', errorScript])
     try {
         await ctx.run()

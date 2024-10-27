@@ -37,12 +37,14 @@ export class Context<E extends boolean = false> {
         return new Promise((resolve, reject) => {
             stderr.on('data', (err: Buffer) => error.push(err))
             stderr.on('error', err => reject(err))
-            stderr.on('end', () =>
-                reject(new Error(
-                    error
-                        .map(chunk => chunk.toString())
-                        .join('')
-                )))
+            stderr.on('end', () => {
+                if(error.length)
+                    reject(new Error(
+                        error
+                            .map(chunk => chunk.toString())
+                            .join('')
+                    ))
+            })
             stdout.on('error', (err) => reject(err))
 
             stdout.on('data', (chunk: Buffer) => data.push(chunk))

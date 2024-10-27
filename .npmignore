@@ -5,3 +5,9 @@ src
 todo.txt
 ruxy.zip
 dev-tests
+Makefile
+README.md
+tsconfig.json
+prettier.config.js
+tests
+jest.config.ts

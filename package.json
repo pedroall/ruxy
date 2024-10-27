@@ -1,6 +1,6 @@
 {
   "name": "ruxy",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/ruxy.js",
   "repository": "https://github.com/pedroall/ruxy",
   "author": "pedroall",
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "clean": "rm -rf ./dist/",
-    "build": "tsc"
+    "build": "yarn clean && tsc"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",

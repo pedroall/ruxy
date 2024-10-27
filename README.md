@@ -9,11 +9,12 @@ echo Hello, World!
 ```ts
 import { Context } from 'ruxy'
 
-const ctx = new Context('sh', './exampleScript.sh')
-    .run()
+const ctx = new Context(['sh', './exampleScript.sh'])
 
-const response = await ctx.stdout()
-console.log(response) // Hello, World!
+ctx.run()
+    .then((ctx) => {
+        console.log(ctx.stdout) // Hello, World!
+    })
 ```
 
 ### Testing
